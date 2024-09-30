@@ -11,15 +11,46 @@
             padding: 0;
             background-color: #f4f4f4;
             display: flex;
-            height: 100vh; /* Full height of the screen */
+            height: 100vh;
             overflow: hidden;
+        }
+        .sidebar {
+            width: 60px;
+            background: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #ddd;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .back-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+        .back-arrow:hover {
+            background-color: #f0f0f0;
         }
         h1 {
             text-align: center;
         }
         .container {
             display: flex;
-            width: 100%;
+            width: calc(100% - 60px); /* Adjusted for sidebar width */
         }
         .menu-container {
             flex: 1;
@@ -58,63 +89,76 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+        .download-link {
+            text-align: center;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
+    <!-- Sidebar for Logo and Back Arrow -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="colored_logo.png" alt="Brie Logo">
+        </div>
+        <div class="back-arrow" onclick="window.location.href='https://askbrie.co.uk';">
+            ←
+        </div>
+    </div>
+
     <div class="container">
         <!-- Menu Items -->
         <div class="menu-container">
             <h1>Our Menu</h1>
             <div class="menu-item">
                 <h2>Grilled Chicken Caesar Salad</h2>
-                <p>Price: $12.99</p>
+                <p>Price: £12.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Vegetarian Quinoa Bowl</h2>
-                <p>Price: $10.99</p>
+                <p>Price: £10.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Beef Burger with Sweet Potato Fries</h2>
-                <p>Price: $14.99</p>
+                <p>Price: £14.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Vegan Lentil Curry</h2>
-                <p>Price: $11.99</p>
+                <p>Price: £11.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Spaghetti Carbonara</h2>
-                <p>Price: $13.99</p>
+                <p>Price: £13.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Grilled Salmon with Asparagus</h2>
-                <p>Price: $18.99</p>
+                <p>Price: £18.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Margherita Pizza</h2>
-                <p>Price: $11.49</p>
+                <p>Price: £11.49</p>
             </div>
 
             <div class="menu-item">
                 <h2>Chicken Tikka Masala</h2>
-                <p>Price: $13.99</p>
+                <p>Price: £13.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Shrimp Tacos</h2>
-                <p>Price: $12.99</p>
+                <p>Price: £12.99</p>
             </div>
 
             <div class="menu-item">
                 <h2>Chocolate Lava Cake</h2>
-                <p>Price: $7.99</p>
+                <p>Price: £7.99</p>
             </div>
-        </div>
 
         <!-- Chatbot Iframe -->
         <div class="chatbot-container">
