@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu with Chatbot</title>
+    <title>Example Restaurant Chatbot</title>
     <style>
         body, html {
             font-family: Arial, sans-serif;
@@ -16,39 +16,42 @@
         .header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center the title */
             background: #ffffff;
             border-bottom: 1px solid #ddd;
             padding: 10px 20px;
             height: 50px;
+            box-sizing: border-box;
+        }
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
         }
         .logo-container {
             display: flex;
             align-items: center;
             cursor: pointer;
+            position: absolute; /* Position logo to the left */
+            left: 20px;
+            top: 10px;
         }
         .logo-container img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 5px;
         }
         .back-arrow {
             font-size: 20px;
-            margin-right: 5px;
             color: #333;
             text-decoration: none;
         }
-        h1 {
-            margin: 0;
-            padding: 0;
-            font-size: 24px;
-        }
         .container {
             display: flex;
-            flex: 1;
             width: 100%;
-            height: calc(100vh - 50px); /* Adjusted for the header height */
+            height: calc(100vh - 50px); /* Adjusted height based on header */
+            box-sizing: border-box;
         }
         .menu-container {
             flex: 1;
@@ -78,20 +81,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0;
             height: 100%;
+            box-sizing: border-box;
         }
         iframe {
             width: 100%;
-            height: 100%; /* Adjusted height to fill container */
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            height: calc(100vh - 50px); /* Adjusted to fit full container height */
+            border: 0;
+            border-radius: 0; /* Removed extra styling */
         }
         /* Responsive Design */
         @media only screen and (max-width: 768px) {
             .container {
                 flex-direction: column;
-                height: auto; /* Allow height to expand on small screens */
+                height: auto;
             }
             .menu-container, .chatbot-container {
                 width: 100%;
@@ -105,14 +109,13 @@
     </style>
 </head>
 <body>
-    <!-- Header Section with Logo and Menu Title -->
+    <!-- Header Section with Centered Title and Left-Aligned Logo -->
     <div class="header">
-        <!-- Clickable Logo with Arrow -->
         <div class="logo-container" onclick="window.location.href='https://askbrie.co.uk';">
             <img src="colored_logo.png" alt="Brie Logo">
             <span class="back-arrow">←</span>
         </div>
-        <h1>Our Menu</h1>
+        <h1>Example Restaurant Chatbot</h1>
     </div>
 
     <!-- Container for Menu and Chatbot -->
