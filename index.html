@@ -13,10 +13,6 @@
             width: 100%;
             overflow: hidden;
         }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
         .header {
             display: flex;
             align-items: center;
@@ -24,6 +20,7 @@
             background: #ffffff;
             border-bottom: 1px solid #ddd;
             padding: 10px 20px;
+            height: 50px;
         }
         .logo-container {
             display: flex;
@@ -51,6 +48,7 @@
             display: flex;
             flex: 1;
             width: 100%;
+            height: calc(100vh - 50px); /* Adjusted for the header height */
         }
         .menu-container {
             flex: 1;
@@ -58,7 +56,6 @@
             background: #fff;
             border-right: 1px solid #ddd;
             overflow-y: auto;
-            max-height: calc(100vh - 50px);
         }
         .menu-item {
             border-bottom: 1px solid #ddd;
@@ -82,10 +79,11 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            height: 100%;
         }
         iframe {
             width: 100%;
-            height: calc(100vh - 50px); /* Fits the height within the screen */
+            height: 100%; /* Adjusted height to fill container */
             border: 1px solid #ddd;
             border-radius: 5px;
         }
@@ -93,6 +91,7 @@
         @media only screen and (max-width: 768px) {
             .container {
                 flex-direction: column;
+                height: auto; /* Allow height to expand on small screens */
             }
             .menu-container, .chatbot-container {
                 width: 100%;
