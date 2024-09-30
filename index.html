@@ -1,45 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Name Chatbot</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
-
-    .chatbot-container {
-      width: 100%;
-      max-width: 900px;
-      height: 95vh; /* Increased height for the chatbot container */
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .menu-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .menu-item h2 {
+            margin: 0 0 10px 0;
+        }
+        .menu-item p {
+            margin: 5px 0;
+            color: #333;
+        }
+        iframe {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="chatbot-container">
+    <h1>Our Menu</h1>
+
+    <!-- Menu Items -->
+    <div class="menu-item">
+        <h2>Grilled Chicken Caesar Salad</h2>
+        <p>Price: $12.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Vegetarian Quinoa Bowl</h2>
+        <p>Price: $10.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Beef Burger with Sweet Potato Fries</h2>
+        <p>Price: $14.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Vegan Lentil Curry</h2>
+        <p>Price: $11.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Spaghetti Carbonara</h2>
+        <p>Price: $13.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Grilled Salmon with Asparagus</h2>
+        <p>Price: $18.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Margherita Pizza</h2>
+        <p>Price: $11.49</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Chicken Tikka Masala</h2>
+        <p>Price: $13.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Shrimp Tacos</h2>
+        <p>Price: $12.99</p>
+    </div>
+
+    <div class="menu-item">
+        <h2>Chocolate Lava Cake</h2>
+        <p>Price: $7.99</p>
+    </div>
+
+    <!-- Chatbot Iframe -->
     <iframe src="https://www.chatbase.co/chatbot-iframe/4f-ZUZ4G1f-DSx2u8Lpkb" 
             width="100%" 
             style="height: 100%; min-height: 700px;" 
             frameborder="0">
     </iframe>
-  </div>
 </body>
 </html>
